@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@700&display=swap');
 @import 'tailwindcss';
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -121,10 +122,14 @@
   * {
     @apply border-border outline-ring/50;
     }
-  body {
-    @apply bg-background text-foreground;
-    }
   html {
-    @apply font-sans;
+    scroll-behavior: smooth;
+    }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: #e6e6e6;
+    }
+  a {
+    @apply transition-colors;
     }
 }
