@@ -1,29 +1,26 @@
-import { Clapperboard } from 'lucide-react'
-
 import { filmProjects } from '@/data/site-content'
 
 export function FilmPortfolioSection() {
   return (
-    <section id="portfolio" className="bg-black px-5 py-18 text-white md:px-10 md:py-24">
-      <div className="mx-auto max-w-[1400px]">
-        <div className="mb-10 flex items-center gap-3">
-          <Clapperboard className="size-5 text-white/70" />
-          <h2 className="font-['Archivo_Black'] text-3xl uppercase md:text-[42px]">
+    <section id="portfolio" className="bg-black py-18 text-white md:py-24">
+      <div className="mx-auto max-w-375">
+        <div className="mb-10 px-5 md:px-10">
+          <h2 className="font-['Archivo_Black'] text-3xl font-bold uppercase md:text-5xl">
             TV & Film
           </h2>
         </div>
 
-        <div className="space-y-10">
+        <div>
           {filmProjects.map((project) => (
             <article
               key={project.title}
-              className="flex flex-col overflow-hidden bg-black md:flex-row"
+              className="flex flex-col overflow-hidden border-t border-white/12 bg-black last:border-b md:min-h-120 md:flex-row"
             >
-              <div className="md:w-[38%] md:shrink-0">
+              <div className="md:w-[31.5%] md:shrink-0">
                 <img
                   src={project.poster}
                   alt={project.title}
-                  className="aspect-2/3 w-full object-cover md:aspect-auto md:h-full md:min-h-[360px]"
+                  className="aspect-2/3 w-full object-cover md:h-full md:min-h-120"
                 />
               </div>
 
@@ -32,32 +29,32 @@ export function FilmPortfolioSection() {
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${project.background})` }}
                 />
-                <div className="absolute inset-0 bg-[#21153a]/70" />
-                <div className="absolute inset-0 bg-black/35" />
+                <div className="absolute inset-0 bg-[#241640]/74" />
+                <div className="absolute inset-0 bg-black/24" />
 
-                <div className="relative z-10 space-y-4 md:space-y-5">
+                <div className="relative z-10 max-w-140 space-y-4 md:space-y-5">
                   <img
                     src={project.platformLogo}
                     alt=""
-                    className="h-6 w-auto object-contain object-left"
+                    className="h-8 w-auto object-contain object-left md:h-9"
                   />
 
-                  <h3 className="font-['Archivo_Black'] text-2xl uppercase tracking-wide text-white md:text-[28px]">
+                  <h3 className="font-['Archivo_Black'] text-2xl uppercase tracking-wide text-white md:text-[32px]">
                     {project.title}
                   </h3>
 
-                  <p className="max-w-md text-sm leading-relaxed text-white/90 md:text-[15px] md:leading-7">
+                  <p className="max-w-135 text-sm leading-relaxed text-white/92 md:text-[15px] md:leading-7">
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-6 pt-1">
+                  <div className="flex flex-wrap gap-8 pt-2">
                     {project.links.map((link) => (
                       <a
                         key={link.label}
                         href={link.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-sm font-semibold uppercase tracking-wide text-[#4a9eff] underline underline-offset-4 transition hover:text-[#7bb8ff]"
+                        className="text-xs font-bold uppercase tracking-[0.18em] text-[#4a9eff] underline underline-offset-4 transition hover:text-[#7bb8ff]"
                       >
                         {link.label}
                       </a>

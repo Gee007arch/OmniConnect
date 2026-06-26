@@ -40,9 +40,9 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-[#28153c]/45 mix-blend-multiply" />
       <div className="absolute inset-0 bg-[#221235]/40" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(43,94,255,0.18),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(146,76,255,0.14),transparent_24%)]" />
-      <div className="hero-orbital-panel hero-orbital-panel--one" />
-      <div className="hero-orbital-panel hero-orbital-panel--two" />
-      <div className="hero-orbital-panel hero-orbital-panel--three" />
+      {/* <div className="hero-orbital-panel hero-orbital-panel--one" /> */}
+      {/* <div className="hero-orbital-panel hero-orbital-panel--two" /> */}
+      {/* <div className="hero-orbital-panel hero-orbital-panel--three" /> */}
       <div className="absolute inset-x-0 bottom-0 h-44 bg-linear-to-t from-black via-black/70 to-transparent" />
 
       <div className="relative mx-auto flex  max-w-[1500px] flex-col justify-between px-5 pb-12 pt-40 md:px-10 md:pb-16">

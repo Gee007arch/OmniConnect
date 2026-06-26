@@ -17,8 +17,8 @@ function App() {
 
       <main id="top">
         <HeroSection />
-        <InRelease />
         <BrandsSection />
+        <InRelease />
         <ComingSoon />
         <FilmPortfolioSection />
         <AudioSection />

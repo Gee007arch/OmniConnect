@@ -42,7 +42,7 @@ export function ComingSoon() {
 
   return (
     <section id="coming-soon" className="bg-black px-5 py-18 text-white md:px-10 md:py-24">
-      <div className="mx-auto max-w-[1400px]">
+      <div className="mx-auto max-w-350">
         <div className="grid gap-10 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-12">
           <div className="space-y-6">
             <h2 className="font-['Archivo_Black'] text-5xl uppercase leading-[0.92] md:text-6xl">
@@ -84,7 +84,7 @@ export function ComingSoon() {
               </button>
             </div>
 
-            <div className="mb-7 h-[3px] w-full overflow-hidden rounded-full bg-white/10">
+            <div className="mb-7 h-0.75 w-full overflow-hidden rounded-full bg-white/10">
               <div
                 className="progress-glow h-full bg-blue-500"
                 style={{
@@ -101,7 +101,7 @@ export function ComingSoon() {
               {comingSoonItems.map((item, index) => (
                 <article
                   key={item.title}
-                  className="comingsoon-card-3d w-[250px] shrink-0 snap-start sm:w-[380px]"
+                  className="comingsoon-card-3d w-62.5 shrink-0 snap-start sm:w-95"
                   style={{ ['--delay' as string]: `${index * 150}ms` }}
                 >
                   <a href={item.href} target="_blank" rel="noreferrer">
@@ -134,7 +134,7 @@ export function ComingSoon() {
                       >
                         {item.primaryCta.label}
                       </a>
-                      <a
+                      <a  
                         href={item.secondaryCta.href}
                         target="_blank"
                         rel="noreferrer"

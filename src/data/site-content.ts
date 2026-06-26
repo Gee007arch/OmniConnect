@@ -257,31 +257,53 @@ export const press = [
 
 export const inReleaseItems = [
   {
-    title: 'Minions & Monsters',
-    poster: 'https://www.universalpictures.com/assets/184d3728-954f-4e3c-aa4c-33ea9a2331cb.webp',
-    href: 'https://www.minionsmovie.com/',
-    primaryCta: { label: 'Get Tickets', href: 'https://www.minionsmovie.com/' },
+    title: 'Disclosure Day',
+    poster: 'https://www.universalpictures.com/assets/8e8ba891-c005-4554-995f-ecdf654e50db.webp',
+    href: 'https://www.disclosuredaymovie.com/tickets/',
+    primaryCta: { label: 'Get Tickets', href: 'https://www.disclosuredaymovie.com/tickets/' },
     secondaryCta: {
       label: 'Watch Trailer',
-      href: 'https://www.youtube.com/playlist?list=PL6xFqsqTknVs9znyvPcZ7xGpPppqe0r6y',
+      href: 'https://www.youtube.com/playlist?list=PLuq_rgCzEP_OVXTuS2d8QNpir7np0x98z',
     },
   },
   {
-    title: 'The Odyssey',
-    poster: 'https://www.universalpictures.com/assets/d6750ab3-6be8-4dfd-b48e-0dddd9143460.webp',
-    href: 'https://www.odysseymovie.com/tickets/',
-    primaryCta: { label: 'Watch at Home', href: 'https://www.odysseymovie.com/tickets/' },
-    secondaryCta: { label: 'Watch Trailer', href: 'https://www.youtube.com/watch?v=f_bKjZeJBBI' },
-  },
-  {
-    title: 'One Night Only',
-    poster: 'https://www.universalpictures.com/assets/68d7c896-407d-4dc0-8848-434f43d9a0a0.webp',
-    href: 'https://www.universalpictures.com/movies/one-night-only/',
+    title: 'You, Me and Tuscany',
+    poster: 'https://www.universalpictures.com/assets/9d2bc0a5-480a-489d-b1b3-c958815bc680.webp',
+    href: 'https://www.universalpictures.com/movies/you-me-tuscany/home/',
     primaryCta: {
       label: 'Watch at Home',
-      href: 'https://www.universalpictures.com/movies/one-night-only/',
+      href: 'https://www.universalpictures.com/movies/you-me-tuscany/watch-at-home/',
     },
-    secondaryCta: { label: 'Watch Trailer', href: 'https://www.youtube.com/watch?v=JRG244IfrRE' },
+    secondaryCta: {
+      label: 'Watch Trailer',
+      href: 'https://www.youtube.com/watch?v=09kuFgvohIU&list=PLuq_rgCzEP_Ods48EwODzpfOpcgtp12Oc',
+    },
+  },
+  {
+    title: 'The Super Mario Galaxy Movie',
+    poster: 'https://www.universalpictures.com/assets/c59b11d7-111f-45c8-9d4e-70c6c9b8dcab.webp',
+    href: 'https://www.thesupermariogalaxymovie.com/home/',
+    primaryCta: {
+      label: 'Watch at Home',
+      href: 'https://www.thesupermariogalaxymovie.com/watch-at-home/',
+    },
+    secondaryCta: {
+      label: 'Watch Trailer',
+      href: 'https://www.thesupermariogalaxymovie.com/videos/',
+    },
+  },
+  {
+    title: 'Reminders of Him',
+    poster: 'https://www.universalpictures.com/assets/062e548e-ff5b-4754-a171-a8968a4a95e1.webp',
+    href: 'https://www.universalpictures.com/movies/reminders-of-him/home/',
+    primaryCta: {
+      label: 'Watch at Home',
+      href: 'https://www.universalpictures.com/movies/reminders-of-him/',
+    },
+    secondaryCta: {
+      label: 'Watch Trailer',
+      href: 'https://uni.pictures/RemindersOfHim_PremiumTrailer',
+    },
   },
 ] as const
 
