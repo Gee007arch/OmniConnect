@@ -2,11 +2,12 @@ import { AudioSection } from '@/components/AudioSection'
 import { BrandsSection } from '@/components/BrandsSection'
 import { FilmPortfolioSection } from '@/components/FilmPortfolioSection'
 import { Footer } from '@/components/Footer'
-import { FounderSection } from '@/components/FounderSection'
+// import { FounderSection } from '@/components/FounderSection'
 import { HeroSection } from '@/components/HeroSection'
-import { PressSection } from '@/components/PressSection'
-import { TeamSection } from '@/components/TeamSection'
-import { UpcomingProjectsSection } from '@/components/UpcomingProjectsSection'
+import { InRelease } from '@/components/InRelease'
+// import { PressSection } from '@/components/PressSection'
+// import { TeamSection } from '@/components/TeamSection'
+import { ComingSoon } from '@/components/ComingSoon'
 import { Navbar } from '@/components/ui/navbar'
 
 function App() {
@@ -16,13 +17,14 @@ function App() {
 
       <main id="top">
         <HeroSection />
+        <InRelease />
         <BrandsSection />
-        <UpcomingProjectsSection />
+        <ComingSoon />
         <FilmPortfolioSection />
         <AudioSection />
-        <FounderSection />
-        <TeamSection />
-        <PressSection />
+        {/* <FounderSection /> */}
+        {/* <TeamSection /> */}
+        {/* <PressSection /> */}
       </main>
 
       <Footer />

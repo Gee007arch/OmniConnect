@@ -133,3 +133,245 @@
     @apply transition-colors;
     }
 }
+
+@keyframes hero-slide-pan {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate3d(0, -1.5%, 0);
+  }
+  100% {
+    transform: scale(1.14) translate3d(0, 1.5%, 0);
+  }
+}
+
+@keyframes hero-copy-rise {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 42px, 0) rotateX(18deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateX(0deg);
+  }
+}
+
+@keyframes hero-panel-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotateX(68deg) rotateY(-14deg) rotateZ(-18deg);
+  }
+  50% {
+    transform: translate3d(0, -24px, 40px) rotateX(72deg) rotateY(-4deg) rotateZ(-10deg);
+  }
+}
+
+@keyframes hero-panel-float-alt {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotateX(72deg) rotateY(18deg) rotateZ(16deg);
+  }
+  50% {
+    transform: translate3d(0, 18px, 64px) rotateX(62deg) rotateY(8deg) rotateZ(10deg);
+  }
+}
+
+@keyframes section-card-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: translate3d(0, -10px, 24px) rotateX(1.6deg) rotateY(-1.6deg);
+  }
+}
+
+@keyframes section-card-float-alt {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: translate3d(0, -14px, 30px) rotateX(-1.2deg) rotateY(1.8deg);
+  }
+}
+
+@keyframes neon-sheen {
+  0% {
+    transform: translateX(-120%) skewX(-20deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.32;
+  }
+  100% {
+    transform: translateX(220%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+@keyframes progress-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(41, 98, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(41, 98, 255, 0.7);
+  }
+}
+
+.hero-depth-stage {
+  perspective: 1800px;
+  transform-style: preserve-3d;
+}
+
+.hero-image-plane {
+  animation: hero-slide-pan 18s ease-in-out infinite alternate;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.hero-copy-3d {
+  transform-origin: top left;
+  animation: hero-copy-rise 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-orbital-panel {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(135deg, rgba(38, 88, 255, 0.2), rgba(144, 74, 255, 0.08)),
+    rgba(255, 255, 255, 0.02);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.hero-orbital-panel::before {
+  content: "";
+  position: absolute;
+  inset: 14%;
+  border-radius: inherit;
+  background: radial-gradient(circle, rgba(96, 149, 255, 0.22), transparent 68%);
+  transform: translateZ(32px);
+}
+
+.hero-orbital-panel--one {
+  top: 18%;
+  right: 9%;
+  height: 160px;
+  width: 300px;
+  border-radius: 30px;
+  animation: hero-panel-float 9s ease-in-out infinite;
+}
+
+.hero-orbital-panel--two {
+  right: 24%;
+  bottom: 17%;
+  height: 110px;
+  width: 200px;
+  border-radius: 24px;
+  animation: hero-panel-float-alt 11s ease-in-out infinite;
+}
+
+.hero-orbital-panel--three {
+  top: 24%;
+  left: -2%;
+  height: 88px;
+  width: 180px;
+  border-radius: 999px;
+  animation: hero-panel-float-alt 8s ease-in-out infinite;
+  opacity: 0.72;
+}
+
+.release-grid-perspective,
+.comingsoon-stage {
+  perspective: 1800px;
+  transform-style: preserve-3d;
+}
+
+.release-card-3d,
+.comingsoon-card-3d {
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.release-card-3d {
+  animation: section-card-float 8s ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+.comingsoon-card-3d {
+  animation: section-card-float-alt 9s ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+.release-card-3d:hover,
+.comingsoon-card-3d:hover {
+  transform: translate3d(0, -14px, 40px) rotateX(8deg) rotateY(-8deg);
+}
+
+.release-poster-shell,
+.comingsoon-poster-shell {
+  position: relative;
+  border-radius: 16px;
+  transform: translateZ(36px);
+  transform-style: preserve-3d;
+  transition: transform 450ms ease, box-shadow 450ms ease;
+  overflow: hidden;
+}
+
+.release-card-3d:hover .release-poster-shell,
+.comingsoon-card-3d:hover .comingsoon-poster-shell {
+  transform: translateZ(70px) rotateX(3deg);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.55);
+}
+
+.release-poster-shell::after,
+.comingsoon-poster-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 20%, rgba(255, 255, 255, 0.2) 48%, transparent 78%);
+  mix-blend-mode: screen;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.release-card-3d:hover .release-poster-shell::after,
+.comingsoon-card-3d:hover .comingsoon-poster-shell::after {
+  opacity: 1;
+  animation: neon-sheen 950ms ease forwards;
+}
+
+.release-meta-3d,
+.comingsoon-meta-3d {
+  transform: translateZ(24px);
+}
+
+.progress-glow {
+  animation: progress-pulse 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image-plane,
+  .hero-copy-3d,
+  .hero-orbital-panel,
+  .release-card-3d,
+  .comingsoon-card-3d,
+  .progress-glow {
+    animation: none !important;
+  }
+
+  .release-card-3d:hover,
+  .comingsoon-card-3d:hover,
+  .release-card-3d:hover .release-poster-shell,
+  .comingsoon-card-3d:hover .comingsoon-poster-shell {
+    transform: none !important;
+  }
+}

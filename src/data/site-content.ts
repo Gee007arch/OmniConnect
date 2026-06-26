@@ -1,9 +1,10 @@
 export const navItems = [
-  { label: 'UPCOMING', href: '#upcoming' },
+  { label: 'IN RELEASE', href: '#in-release' },
+  { label: 'COMING SOON', href: '#coming-soon' },
   { label: 'TV & FILM', href: '#portfolio' },
   { label: 'AUDIO', href: '#audio' },
-  { label: 'TEAM', href: '#team' },
-  { label: 'PRESS', href: '#press' },
+  // { label: 'TEAM', href: '#team' },
+  // { label: 'PRESS', href: '#press' },
 ] as const
 
 export const heroSlides = [
@@ -251,5 +252,110 @@ export const press = [
     logo: 'https://images.squarespace-cdn.com/content/v1/623256994b9acd79919d2423/b531131c-3b4e-445e-970e-12658f42fc0d/essence-png-logo.png',
     title: 'Black Love co-creator Codie Elaine Oliver on showing that Black love is worth it',
     href: 'https://www.essence.com/',
+  },
+] as const
+
+export const inReleaseItems = [
+  {
+    title: 'Minions & Monsters',
+    poster: 'https://www.universalpictures.com/assets/184d3728-954f-4e3c-aa4c-33ea9a2331cb.webp',
+    href: 'https://www.minionsmovie.com/',
+    primaryCta: { label: 'Get Tickets', href: 'https://www.minionsmovie.com/' },
+    secondaryCta: {
+      label: 'Watch Trailer',
+      href: 'https://www.youtube.com/playlist?list=PL6xFqsqTknVs9znyvPcZ7xGpPppqe0r6y',
+    },
+  },
+  {
+    title: 'The Odyssey',
+    poster: 'https://www.universalpictures.com/assets/d6750ab3-6be8-4dfd-b48e-0dddd9143460.webp',
+    href: 'https://www.odysseymovie.com/tickets/',
+    primaryCta: { label: 'Watch at Home', href: 'https://www.odysseymovie.com/tickets/' },
+    secondaryCta: { label: 'Watch Trailer', href: 'https://www.youtube.com/watch?v=f_bKjZeJBBI' },
+  },
+  {
+    title: 'One Night Only',
+    poster: 'https://www.universalpictures.com/assets/68d7c896-407d-4dc0-8848-434f43d9a0a0.webp',
+    href: 'https://www.universalpictures.com/movies/one-night-only/',
+    primaryCta: {
+      label: 'Watch at Home',
+      href: 'https://www.universalpictures.com/movies/one-night-only/',
+    },
+    secondaryCta: { label: 'Watch Trailer', href: 'https://www.youtube.com/watch?v=JRG244IfrRE' },
+  },
+] as const
+
+export const comingSoonItems = [
+  {
+    title: 'Minions & Monsters',
+    poster:
+      'https://www.universalpictures.com/assets/184d3728-954f-4e3c-aa4c-33ea9a2331cb.webp',
+    href: 'https://www.minionsmovie.com/',
+    primaryCta: { label: 'Get Tickets', href: 'https://www.minionsmovie.com/' },
+    secondaryCta: {
+      label: 'Watch Trailer',
+      href: 'https://www.youtube.com/playlist?list=PL6xFqsqTknVs9znyvPcZ7xGpPppqe0r6y',
+    },
+  },
+  {
+    title: 'The Odyssey',
+    poster:
+      'https://www.universalpictures.com/assets/d6750ab3-6be8-4dfd-b48e-0dddd9143460.webp',
+    href: 'https://www.odysseymovie.com/tickets/',
+    primaryCta: { label: 'Get Tickets', href: 'https://www.odysseymovie.com/tickets/' },
+    secondaryCta: {
+      label: 'Watch Trailer',
+      href: 'https://www.youtube.com/watch?v=f_bKjZeJBBI',
+    },
+  },
+  {
+    title: 'One Night Only',
+    poster:
+      'https://www.universalpictures.com/assets/68d7c896-407d-4dc0-8848-434f43d9a0a0.webp',
+    href: 'https://www.universalpictures.com/movies/one-night-only/',
+    primaryCta: {
+      label: 'Learn More',
+      href: 'https://www.universalpictures.com/movies/one-night-only/',
+    },
+    secondaryCta: {
+      label: 'Watch Trailer',
+      href: 'https://www.youtube.com/watch?v=JRG244IfrRE',
+    },
+  },
+  {
+    title: 'Forgotten Island',
+    poster:
+      'https://www.universalpictures.com/assets/a989e499-e22e-4029-9ccd-11f1afd0cb39.webp',
+    href: 'https://www.forgottenislandmovie.com/',
+    primaryCta: { label: 'Learn More', href: 'https://www.forgottenislandmovie.com/' },
+    secondaryCta: {
+      label: 'Watch Trailer',
+      href: 'https://www.youtube.com/playlist?list=PLuq_rgCzEP_OiKxKgBU6SQraCX-4Wu1ND',
+    },
+  },
+  {
+    title: 'Focker-In-Law',
+    poster:
+      'https://www.universalpictures.com/assets/b69b0643-e0ac-47bc-b7b0-4cd711b3eb03.webp',
+    href: 'https://www.universalpictures.com/movies/focker-in-law/',
+    primaryCta: {
+      label: 'Learn More',
+      href: 'https://www.universalpictures.com/movies/focker-in-law/',
+    },
+    secondaryCta: {
+      label: 'Watch Trailer',
+      href: 'https://www.youtube.com/watch?v=vyISuWUWcFs',
+    },
+  },
+  {
+    title: 'Shrek 5',
+    poster:
+      'https://www.universalpictures.com/assets/a3c4b86e-80bc-46a3-9bfa-d589361ff44e.webp',
+    href: 'https://www.shrek.com/',
+    primaryCta: { label: 'Learn More', href: 'https://www.shrek.com/' },
+    secondaryCta: {
+      label: 'Watch Trailer',
+      href: 'https://www.youtube.com/playlist?list=PLK0ZKC9l4F6k',
+    },
   },
 ] as const

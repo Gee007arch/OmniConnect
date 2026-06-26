@@ -1,4 +1,4 @@
-import { ArrowUpRight, Clapperboard } from 'lucide-react'
+import { Clapperboard } from 'lucide-react'
 
 import { filmProjects } from '@/data/site-content'
 
@@ -17,51 +17,51 @@ export function FilmPortfolioSection() {
           {filmProjects.map((project) => (
             <article
               key={project.title}
-              className="overflow-hidden rounded-[32px] border border-white/10 bg-neutral-900"
+              className="flex flex-col overflow-hidden bg-black md:flex-row"
             >
-              <div className="grid lg:grid-cols-[1.2fr_0.85fr]">
-                <div
-                  className="relative min-h-[280px] bg-cover bg-center"
-                  style={{ backgroundImage: `url(${project.background})` }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent" />
-                </div>
+              <div className="md:w-[38%] md:shrink-0">
+                <img
+                  src={project.poster}
+                  alt={project.title}
+                  className="aspect-2/3 w-full object-cover md:aspect-auto md:h-full md:min-h-[360px]"
+                />
+              </div>
 
-                <div className="grid gap-6 p-6 md:p-8 lg:grid-cols-[140px_minmax(0,1fr)] lg:p-9">
+              <div className="relative flex flex-1 flex-col justify-center px-8 py-10 md:px-12 md:py-14 lg:px-16">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${project.background})` }}
+                />
+                <div className="absolute inset-0 bg-[#21153a]/70" />
+                <div className="absolute inset-0 bg-black/35" />
+
+                <div className="relative z-10 space-y-4 md:space-y-5">
                   <img
-                    src={project.poster}
-                    alt={project.title}
-                    className="w-full rounded-2xl object-cover shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
+                    src={project.platformLogo}
+                    alt=""
+                    className="h-6 w-auto object-contain object-left"
                   />
 
-                  <div>
-                    <h3 className="font-['Archivo_Black'] text-2xl uppercase md:text-[30px]">
-                      {project.title}
-                    </h3>
-                    <p className="mt-4 max-w-xl text-[15px] leading-7 text-white/76">
-                      {project.description}
-                    </p>
+                  <h3 className="font-['Archivo_Black'] text-2xl uppercase tracking-wide text-white md:text-[28px]">
+                    {project.title}
+                  </h3>
 
-                    <div className="mt-6 flex flex-wrap items-center gap-3">
-                      {project.links.map((link) => (
-                        <a
-                          key={link.label}
-                          href={link.href}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex h-11 items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 text-[11px] tracking-[0.22em] text-white transition hover:bg-white hover:text-black"
-                        >
-                          {link.label}
-                          <ArrowUpRight className="size-4" />
-                        </a>
-                      ))}
-                    </div>
+                  <p className="max-w-md text-sm leading-relaxed text-white/90 md:text-[15px] md:leading-7">
+                    {project.description}
+                  </p>
 
-                    <img
-                      src={project.platformLogo}
-                      alt=""
-                      className="mt-8 h-6 w-auto object-contain object-left opacity-85"
-                    />
+                  <div className="flex flex-wrap gap-6 pt-1">
+                    {project.links.map((link) => (
+                      <a
+                        key={link.label}
+                        href={link.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sm font-semibold uppercase tracking-wide text-[#4a9eff] underline underline-offset-4 transition hover:text-[#7bb8ff]"
+                      >
+                        {link.label}
+                      </a>
+                    ))}
                   </div>
                 </div>
               </div>

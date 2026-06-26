@@ -9,7 +9,7 @@ export function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/35 backdrop-blur-md">
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-5 md:px-10">
+      <div className="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-5 md:px-10">
         <a href="#top" className="relative z-20">
           <img
             src={siteLogo}
@@ -23,7 +23,7 @@ export function Navbar() {
             <a
               key={item.label}
               href={item.href}
-              className="text-[11px] tracking-[0.22em] text-white/90 transition hover:text-white"
+              className="text-xs lg:text-sm tracking-[0.22em] font-bold text-white/90 transition hover:text-white"
             >
               {item.label}
             </a>
