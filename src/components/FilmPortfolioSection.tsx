@@ -30,11 +30,11 @@ export function FilmPortfolioSection() {
                 <img
                   src={project.poster}
                   alt={project.title}
-                  className="aspect-2/3 w-full object-cover md:h-full md:min-h-120 p-18"
+                  className="aspect-2/3 w-full object-cover md:h-full md:min-h-120 py-12 px-5 md:p-18"
                 />
               </div>
 
-              <div className="relative flex flex-1 flex-col justify-center px-4 py-10 md:px-6 md:py-14 lg:px-8">
+              <div className="relative flex flex-1 flex-col justify-center px-5 py-10 md:px-6 md:py-14 lg:px-8">
           
                 <div className="relative z-10 max-w-140 space-y-3 md:space-y-4">
                   <img
@@ -47,7 +47,7 @@ export function FilmPortfolioSection() {
                     {project.title}
                   </h3>
 
-                  <p className="max-w-135 text-sm leading-relaxed text-white/92 md:text-base md:leading-7">
+                  <p className="max-w-135  leading-relaxed text-white/92 text-base md:leading-7">
                     {project.description}
                   </p>
 

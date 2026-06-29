@@ -1,4 +1,4 @@
-import { Clapperboard } from 'lucide-react'
+// import { Clapperboard } from 'lucide-react'
 
 import { brands } from '@/data/site-content'
 
@@ -7,7 +7,7 @@ export function BrandsSection() {
     <section className="border-t border-black/10 bg-[#000000] px-5 py-18 text-white md:px-10 md:py-24">
       <div className="mx-auto max-w-375">
         <div className="mb-10 flex items-center gap-3">
-          <Clapperboard className="size-5 text-white/70" />
+          {/* <Clapperboard className="size-5 text-white/70" /> */}
           <h2 className="font-['Archivo_Black'] text-3xl font-bold uppercase md:text-5xl">
             Our Brands
           </h2>

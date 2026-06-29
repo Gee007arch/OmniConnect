@@ -45,7 +45,7 @@ export function HeroSection() {
       {/* <div className="hero-orbital-panel hero-orbital-panel--three" /> */}
       <div className="absolute inset-x-0 bottom-0 h-44 bg-linear-to-t from-black via-black/70 to-transparent" />
 
-      <div className="relative mx-auto flex  max-w-[1500px] flex-col justify-between px-5 pb-12 pt-40 md:px-10 md:pb-16">
+      <div className="relative mx-auto flex  max-w-375 flex-col justify-between px-5 pb-12 pt-40 md:px-10 md:pb-16">
         <div className="hero-copy-3d mb-48 max-w-5xl space-y-24">
           <h1 className="font-['Montserrat'] text-4xl font-bold uppercase leading-tight text-white md:text-6xl md:leading-[1.08]">
             Moving culture through bold storytelling.
