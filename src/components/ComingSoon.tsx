@@ -62,7 +62,7 @@ export function ComingSoon() {
             </a>
           </div>
 
-          <div className="comingsoon-stage relative">
+          <div className="comingsoon-stage relative overflow-hidden">
             <div className="absolute -top-14 right-0 flex items-center gap-2">
               <button
                 type="button"

@@ -21,7 +21,7 @@ export function FilmPortfolioSection() {
                 <div className="absolute inset-0 bg-black/24" />
             <article
               key={project.title}
-              className=" flex flex-col overflow-hidden   border-t border-white/12 bg-black last:border-b md:min-h-120 md:flex-row"
+              className=" flex flex-col overflow-hidden   border-t border-white/12 bg-black last:border-b md:min-h-120 md:flex-row  px-5 md:px-10 max-w-375 mx-auto"
             >
             
 

@@ -17,17 +17,18 @@ function App() {
 
       <main id="top">
         <HeroSection />
-        <BrandsSection />
-        <InRelease />
-        <ComingSoon />
-        <FilmPortfolioSection />
-        <AudioSection />
-        {/* <FounderSection /> */}
+          <BrandsSection />
+          <InRelease />
+          <ComingSoon />
+          <FilmPortfolioSection />
+
+          <AudioSection />
+        {/* <FounderSection /> */}    
         {/* <TeamSection /> */}
         {/* <PressSection /> */}
       </main>
 
-      <Footer />
+        <Footer />
     </div>
   )
 }

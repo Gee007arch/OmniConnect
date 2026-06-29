@@ -62,7 +62,7 @@ export function InRelease() {
             </a>
           </div>
 
-          <div className="relative">
+          <div className="relative  overflow-hidden">
             <div className="absolute -top-14 right-0 flex items-center gap-2">
               <button
                 type="button"
@@ -84,9 +84,9 @@ export function InRelease() {
               </button>
             </div>
 
-            <div className="mb-7 h-[3px] w-full overflow-hidden rounded-full bg-white/10">
+            <div className="mb-7 h-0.75 w-full overflow-hidden rounded-full bg-white/10">
               <div
-                className="h-full bg-blue-500"
+                className="progress-glow h-full bg-blue-500"
                 style={{
                   width: `${Math.max(0.12, Math.min(1, thumbWidth)) * 100}%`,
                   transform: `translateX(${progress * (100 - Math.max(0.12, Math.min(1, thumbWidth)) * 100)}%)`,
@@ -99,7 +99,7 @@ export function InRelease() {
               className="scrollbar-none flex gap-8 overflow-x-auto scroll-smooth pb-2 pr-8 snap-x snap-mandatory [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
             >
               {inReleaseItems.map((item) => (
-                <article key={item.title} className="w-[250px] shrink-0 snap-start sm:w-[380px]">
+                <article key={item.title} className="w-62.5 shrink-0 snap-start sm:w-95">
                   <a href={item.href} target="_blank" rel="noreferrer">
                     <img
                       src={item.poster}

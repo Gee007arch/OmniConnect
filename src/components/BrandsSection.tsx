@@ -13,18 +13,18 @@ export function BrandsSection() {
           </h2>
         </div>
 
-        <div className="grid gap-px overflow-hidden rounded-lg bg-white/10 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid overflow-hidden gap-3 rounded-lg md:grid-cols-2 xl:grid-cols-4">
           {brands.map((brand) => (
             <article
               key={brand.logo}
-              className="flex min-h-80 flex-col justify-between bg-black px-7 py-8 md:px-8"
+              className="flex min-h-80 flex-col justify-between bg-black  py-8 "
             >
               <img
                 src={brand.logo}
                 alt=""
                 className="h-14 w-auto object-contain object-left"
               />
-              <p className="mt-10 text-base leading-7 text-white">{brand.copy}</p>
+              <p className="mt-10 text-base leading-[1.6] text-white">{brand.copy}</p>
             </article>
           ))}
         </div>

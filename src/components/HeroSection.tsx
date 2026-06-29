@@ -25,12 +25,12 @@ export function HeroSection() {
   // }
 
   return (
-    <section className="hero-depth-stage relative min-h-screen overflow-hidden bg-black">
+    <section className="hero-depth-stage relative overflow-hidden bg-black">
       {heroSlides.map((image, index) => (
         <div
           key={image}
           className={cn(
-            'hero-image-plane absolute inset-0 bg-cover bg-center transition-opacity duration-1000 grayscale brightness-90 contrast-[1.05]',
+            'hero-image-plane absolute inset-0 transition-opacity duration-1000 grayscale brightness-90 contrast-[1.05]',
             index === activeSlide ? 'opacity-100' : 'opacity-0'
           )}
           style={{ backgroundImage: `url(${image})` }}
@@ -45,12 +45,12 @@ export function HeroSection() {
       {/* <div className="hero-orbital-panel hero-orbital-panel--three" /> */}
       <div className="absolute inset-x-0 bottom-0 h-44 bg-linear-to-t from-black via-black/70 to-transparent" />
 
-      <div className="relative mx-auto flex  max-w-375 flex-col justify-between px-5 pb-12 pt-40 md:px-10 md:pb-16">
-        <div className="hero-copy-3d mb-48 max-w-5xl space-y-24">
-          <h1 className="font-['Montserrat'] text-4xl font-bold uppercase leading-tight text-white md:text-6xl md:leading-[1.08]">
+      <div className="relative mx-auto flex min-h-[35rem] max-w-375 flex-col justify-between gap-14 px-5 pb-10 pt-32 sm:min-h-[40rem] sm:gap-18 md:min-h-[46rem] md:px-10 md:pb-16 md:pt-40 xl:min-h-[43rem] xl:gap-14 2xl:min-h-[45rem]">
+        <div className="hero-copy-3d max-w-5xl space-y-10 md:space-y-16 xl:space-y-20">
+          <h1 className="font-['Montserrat'] text-2xl font-bold uppercase leading-[1.2] text-white sm:text-3xl md:text-4xl md:leading-[1.08] lg:text-6xl">
             Moving culture through bold storytelling.
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-white/82 md:text-lg">
+          <p className="mt-5 max-w-2xl text-base leading-[1.6] text-white/82 md:text-lg">
             Confluential Films is an award-winning, Black-owned and
             Black-founded, film, television, and documentary production company
             and financier. We are creator-driven, hyper-collaborative, and
@@ -58,14 +58,14 @@ export function HeroSection() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-4 ">
+        <div className="flex flex-col gap-4">
           <span className="text-sm font-semibold text-white/90">
             We love our partners!
           </span>
           <img
             src={logoBar}
             alt="Partner logos"
-            className="h-auto w-full max-w-[620px] opacity-95"
+            className="h-auto w-full max-w-155 opacity-95"
           />
         </div>
 
