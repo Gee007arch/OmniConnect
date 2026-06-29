@@ -9,7 +9,7 @@ export function Navbar() {
 
   return (
     <header className="site-header-enter fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/35 backdrop-blur-md">
-      <div className="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-5 md:px-10">
+      <div className="mx-auto flex max-w-375 items-center justify-between px-5 py-5 md:px-10">
         <a href="#top" className="relative z-20">
           <img
             src={siteLogo}
